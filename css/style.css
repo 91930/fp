@@ -130,6 +130,11 @@ select {
   color: rgb(225, 227, 230);
 }
 
+.fp_deleted {
+  opacity: 0.4;
+  background-color: #222222;
+}
+
 .fp-num {
   font-family: FSElliotPro-Bold;
   position: absolute;
@@ -149,6 +154,10 @@ select {
   transform: translate(50%, 50%);
   font-size: 14px;
   cursor: pointer;
+}
+
+.fp_deleted .fp-num_r {
+  cursor: help;
 }
 
 .fp__arqed-menu {
@@ -242,6 +251,10 @@ a.fp-user__avatar {
   background-position: center;
   background-color: #232939;
   border-radius: 50%;
+}
+
+.fp_deleted .fp-user__forum-staff {
+  background-color: #222222;
 }
 
 .fp-user__forum-staff_moder {
@@ -346,6 +359,14 @@ a.fp__anchor {
   margin-top: 3px;
 }
 
+.fp_deleted .fp__subcontent-log p {
+  color: #b0b8c3;
+}
+
+.fp_deleted .fp__subcontent-log a {
+  color: white;
+}
+
 .fp__subcontent {
   position: relative;
   display: flex;
@@ -375,6 +396,10 @@ a.fp__anchor {
   display: flex;
 }
 
+.fp_deleted .fp__reactions-count {
+  display: none;
+}
+
 .fp__subcontent-side_right {
   position: absolute;
   bottom: 0;
@@ -391,6 +416,10 @@ a.fp__anchor {
   transition: opacity 0.1s ease;
 }
 
+.fp_deleted .fp__reactions {
+  opacity: 1;
+}
+
 .fp__reactions div {
   position: relative;
   z-index: 10;
@@ -401,6 +430,10 @@ a.fp__anchor {
   background-position-x: 10px;
   background-color: revert;
   border: 2px solid rgb(41, 87, 121);
+}
+
+.fp_deleted .fp__reactions div {
+  cursor: help;
 }
 
 .fp__reaction_like {
@@ -415,27 +448,27 @@ a.fp__anchor {
 }
 
 .fp__sign {
-  padding-top: 10px;
+  padding-top: 12px;
   border-top: 1px solid rgb(41, 87, 121);
   font-size: 18px;
 }
 
 @media (min-width: 890px) {
-  .fp:hover .fp__arqed,
-  .fp:hover .fp__ed,
-  .fp:hover .fp__reactions {
+  .fp:not(.fp_deleted):hover .fp__arqed,
+  .fp:not(.fp_deleted):hover .fp__ed,
+  .fp:not(.fp_deleted):hover .fp__reactions {
     opacity: 1;
   }
 
-  .fp:hover {
+  .fp:not(.fp_deleted):hover {
     background-color: #222222;
   }
 
-  .fp:hover .fp-user__forum-staff {
+  .fp:not(.fp_deleted):hover .fp-user__forum-staff {
     background-color: #222222;
   }
 
-  .fp:hover .fp__reactions-count {
+  .fp:not(.fp_deleted):hover .fp__reactions-count {
     opacity: 0;
   }
 }
@@ -490,6 +523,10 @@ a.fp__anchor {
 
   .fp__arqed-menu.active {
     transform: rotate(180deg);
+  }
+
+  .fp_deleted .fp__arqed-menu {
+    display: none;
   }
 
   .fp__arqed {
@@ -579,6 +616,10 @@ a.fp__anchor {
   .fp__da {
     font-size: 13px;
   }
+
+  .fp__sign {
+    padding-top: 8px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -642,5 +683,9 @@ a.fp__anchor {
 
   .fp__subcontent-log {
     font-size: 11px;
+  }
+
+  .fp__sign {
+    padding-top: 4px;
   }
 }
