@@ -477,7 +477,7 @@ a.fp__anchor {
   .fp {
     grid-template: 1fr / 1fr;
     padding: 10px 15px;
-    min-height: 300px;
+    min-height: revert;
     background-color: #222222;
   }
 
@@ -623,10 +623,6 @@ a.fp__anchor {
 }
 
 @media (max-width: 550px) {
-  .fp {
-    min-height: 320px;
-  }
-
   .fp__subcontent {
     min-height: 95px;
   }
