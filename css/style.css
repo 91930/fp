@@ -558,13 +558,13 @@ a.fp__anchor {
   }
 
   a.fp-user__avatar {
-    width: 102px;
-    height: 102px;
+    width: 96px;
+    height: 96px;
   }
 
   .fp-user__avatar-img {
-    width: 102px;
-    height: 102px;
+    width: 96px;
+    height: 96px;
   }
 
   .fp-user__forum-staff {
@@ -614,6 +614,16 @@ a.fp__anchor {
 
   .fp-user__info {
     margin-left: 15px;
+  }
+
+  a.fp-user__avatar {
+    width: 92px;
+    height: 92px;
+  }
+
+  .fp-user__avatar-img {
+    width: 92px;
+    height: 92px;
   }
 
   a.fp__nick_m {
